@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+
+<h1>{{article.title}}</h1>
+<p>Prix : {{ article.price }}</p>
+<p>Status : {{ article.status }}</p>
+<img src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="">
+
+<a href="{{ path('article') }}">Retour</a>
+
+{% endblock %}

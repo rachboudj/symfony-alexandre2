@@ -1,0 +1,21 @@
+{# templates/base/header.html.twig #}
+<header>
+    <nav>
+        <!-- Liens de navigation ou branding ici -->
+        <ul>
+            <!-- Autres éléments de la liste -->
+            {% if app.user %}
+                <li>
+                    <a href="{{ path('app_logout') }}">Déconnexion</a>
+                </li>
+            {% else %}
+            <li>
+                    <a href="{{ path('app_register') }}">S'inscrire</a>
+                </li>    
+            <li>
+                    <a href="{{ path('app_login') }}">Se connecter</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+
+
+{{ form_start(articleForm) }}
+{{ form(articleForm) }}
+{{ form_end(articleForm) }}
+
+<a href="{{ path('article') }}">Retour à la liste des articles</a>
+{% endblock %}
